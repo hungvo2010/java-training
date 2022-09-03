@@ -1,0 +1,39 @@
+import java.util.Date;
+
+public class Football {
+    private int score;
+    private int time;
+    private String team;
+    private final Date start;
+
+    public Football(int score, int time, String team) {
+        this.score = score;
+        this.time = time;
+        this.team = team;
+        this.start = new Date();
+    }
+    public Football(){
+        this(0, 0, "unknown");
+    }
+    public int getScore() {
+        return score;
+    }
+    public void setScore(int score) {
+        this.score = score;
+    }
+    public int getTime() {
+        return time;
+    }
+    public void setTime(int time) {
+        this.time = time;
+    }
+    public String getTeam() {
+        return team;
+    }
+    public void setTeam(String team) {
+        this.team = team;
+    }
+    public Date getStartDate() {
+        return (Date) start.clone();
+    }
+}
