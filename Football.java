@@ -3,7 +3,7 @@ import java.util.Date;
 public class Football {
     private int score;
     private int time;
-    private String team;
+    private String team = init();
     private final Date start;
 
     public Football(int score, int time, String team) {
@@ -12,28 +12,52 @@ public class Football {
         this.team = team;
         this.start = new Date();
     }
-    public Football(){
-        this(0, 0, "unknown");
+
+    public String init() {
+        System.out.println("Football class init");
+        return "Barcelona";
     }
+
+    public Football() {
+        this(0, 0, "unknown");
+
+    }
+
     public int getScore() {
         return score;
     }
+
     public void setScore(int score) {
         this.score = score;
     }
+
     public int getTime() {
         return time;
     }
+
     public void setTime(int time) {
         this.time = time;
     }
+
     public String getTeam() {
         return team;
     }
+
     public void setTeam(String team) {
         this.team = team;
     }
+
     public Date getStartDate() {
         return (Date) start.clone();
+    }
+
+    public static Football createFootball() {
+        System.out.println("Create a football");
+        Football c = new Football();
+        return c;
+    }
+
+    static {
+        System.out.println("Football class loaded");
     }
 }
