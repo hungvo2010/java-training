@@ -2,5 +2,8 @@ public interface DefaultMethodInterface {
     default int getValue() {
         return 0;
     }
-    void printString();
+
+    static void printString() {
+        System.out.println("DefaultMethodInterface");
+    }
 }
