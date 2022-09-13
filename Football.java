@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Football {
+public class Football implements Comparable<Football> {
     private int score;
     private int time;
     private String team = init();
@@ -59,5 +59,10 @@ public class Football {
 
     static {
         System.out.println("Football class loaded");
+    }
+
+    @Override
+    public int compareTo(Football o) {
+        return this.score - o.score;
     }
 }
