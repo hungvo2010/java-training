@@ -4,15 +4,15 @@ import java.util.Map;
 /**
  * Illustration of using HashMap to retrieve the value of enum.
  */
-public enum ACTION {
+public enum ACTIONToTestMapEnum {
     READ_FILE(0),
     RESULT(1),
     TIME(2);
 
     private int valueAction;
-    private static Map<Integer, ACTION> map = new HashMap<Integer, ACTION>();
+    private static Map<Integer, ACTIONToTestMapEnum> map = new HashMap<Integer, ACTIONToTestMapEnum>();
 
-    ACTION(int t) {
+    ACTIONToTestMapEnum(int t) {
         valueAction = t;
     }
 
@@ -20,12 +20,12 @@ public enum ACTION {
         return valueAction;
     }
 
-    static ACTION getByValue(int key) {
+    static ACTIONToTestMapEnum getByValue(int key) {
         return map.getOrDefault(key, READ_FILE);
     }
 
     static {
-        for (ACTION action : ACTION.values()) {
+        for (ACTIONToTestMapEnum action : ACTIONToTestMapEnum.values()) {
             map.put(action.valueAction, action);
         }
     }
