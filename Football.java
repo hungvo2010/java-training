@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Football implements Comparable<Football> {
     private int score;
@@ -51,10 +53,13 @@ public class Football implements Comparable<Football> {
         return (Date) start.clone();
     }
 
-    public static Football createFootball() {
+    public static List<Football> createFootball() {
         System.out.println("Create a football");
-        Football c = new Football();
-        return c;
+        return Football.createEmptyList();
+    }
+
+    private static List<Football> createEmptyList() {
+        return new ArrayList<>();
     }
 
     static {

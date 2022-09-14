@@ -1,10 +1,14 @@
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
-public class Employee implements Comparable<Employee> {
+public class Employee implements Comparable<Employee>, Iterator<Employee> {
 
     private String name;
     private double salary;
-    private Football football;
+    private List<Football> football;
+    private int currentIndex = -1;
 
     public Employee(String name, double salary) {
         this.name = name;
@@ -20,7 +24,7 @@ public class Employee implements Comparable<Employee> {
         return salary;
     }
 
-    public Football getFootball() {
+    public List<Football> getFootball() {
         return football;
     }
 
@@ -36,8 +40,8 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        // return getClass().getName() + "[name=" + name + ",salary=" + salary + "]";
-        return super.toString();
+        return getClass().getName() + "[name=" + name + ",salary=" + salary + "]";
+        // return super.toString();
     }
 
     @Override
@@ -65,5 +69,30 @@ public class Employee implements Comparable<Employee> {
     @Override
     public int hashCode() {
         return Objects.hash(name, salary, football);
+    }
+
+    @Override
+    public boolean hasNext() {
+        // TODO Auto-generated method stub
+        if (currentIndex > football.size() - 1) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public Employee next() {
+        // TODO Auto-generated method stub
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        currentIndex++;
+        return this;
+    }
+
+    @Override
+    public void remove() {
+        // TODO Auto-generated method stub
+        Iterator.super.remove();
     }
 }
