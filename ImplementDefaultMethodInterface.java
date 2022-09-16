@@ -1,9 +1,4 @@
-public class ImplementDefaultMethodInterface implements DefaultMethodInterface {
-
-    @Override
-    public int getValue() {
-        // override the default method in interface
-        return 10;
-    }
-
+public abstract class ImplementDefaultMethodInterface implements DefaultMethodInterface, NonDefaultMethodInterface {
+    // This class can leave getValue() method unimplement because it is an abstract
+    // class.
 }
