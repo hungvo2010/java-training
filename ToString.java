@@ -1,3 +1,5 @@
+import p1.Employee;
+
 public class ToString {
     public static void main(String[] args) {
         Employee e = new Manager("manager", 100);

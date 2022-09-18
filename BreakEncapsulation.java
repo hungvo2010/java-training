@@ -1,5 +1,7 @@
 import java.util.Date;
 
+import p2.Football;
+
 public class BreakEncapsulation {
     public static void main(String[] args) {
         Football barca = new Football();   

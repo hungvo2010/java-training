@@ -1,3 +1,5 @@
+import p1.Employee;
+
 public class TestDefaultMethodInterface {
     public static void main(String[] args) {
         // Static, default method using.

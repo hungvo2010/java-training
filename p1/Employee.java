@@ -1,7 +1,12 @@
+package p1;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+
+import p2.Football;
+
 
 public class Employee implements Comparable<Employee>, Iterator<Employee> {
 
@@ -24,6 +29,10 @@ public class Employee implements Comparable<Employee>, Iterator<Employee> {
         return salary;
     }
 
+    protected void printName() {
+        System.out.println(this.getClass().getName());
+    }
+
     public List<Football> getFootball() {
         return football;
     }
@@ -35,6 +44,8 @@ public class Employee implements Comparable<Employee>, Iterator<Employee> {
 
     @Override
     public int compareTo(Employee other) {
+        if (this.getClass() != other.getClass())
+            throw new ClassCastException();
         return Double.compare(this.salary, other.salary);
     }
 
@@ -95,4 +106,11 @@ public class Employee implements Comparable<Employee>, Iterator<Employee> {
         // TODO Auto-generated method stub
         Iterator.super.remove();
     }
+
+    // @Override
+    // protected Object clone() throws CloneNotSupportedException {
+    // Employee fresh = (Employee) super.clone();
+    // fresh.football = new ArrayList<>(football);
+    // return fresh;
+    // }
 }

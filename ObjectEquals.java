@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import p1.Employee;
+
 public class ObjectEquals {
     public static void main(String[] args) {
         Map<Integer, Employee> map = new HashMap<>();

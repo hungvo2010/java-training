@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import p1.Employee;
+
 public class ComparableTest {
     public static void main(String[] args) {
         Employee[] staff = new Employee[4];

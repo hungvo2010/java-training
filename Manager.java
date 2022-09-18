@@ -1,9 +1,13 @@
-public class Manager extends Employee {
+import p1.Employee;
+
+public class Manager extends Employee implements Cloneable {
     private int bonus;
+    private NotClone notClone;
 
     public Manager(String name, double salary) {
         super(name, salary);
         bonus = 100;
+        notClone = new NotClone();
         // TODO Auto-generated constructor stub
     }
 
@@ -23,4 +27,12 @@ public class Manager extends Employee {
         return super.compareTo(other);
     }
 
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        // TODO Auto-generated method stub
+        Manager cloned = (Manager) super.clone();
+        assert cloned == null : "cloned is null";
+        cloned.notClone = (NotClone) notClone.clone();
+        return cloned;
+    }
 }

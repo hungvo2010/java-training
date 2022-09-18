@@ -1,5 +1,7 @@
 import java.util.Comparator;
 
+import p1.Employee;
+
 public class ComparatorInterfaceStringBased implements Comparator<Employee> {
 
     @Override

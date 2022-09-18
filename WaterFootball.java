@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import p2.Football;
+
 public class WaterFootball extends Football {
     public WaterFootball(int score, int time, String team) {
         super(score, time, team);
