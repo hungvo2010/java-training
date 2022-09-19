@@ -32,6 +32,9 @@ public class Manager extends Employee implements Cloneable {
         // TODO Auto-generated method stub
         Manager cloned = (Manager) super.clone();
         assert cloned == null : "cloned is null";
+        // cloned.notClone is in same package with Manager, so its method clone() can be accessed
+        // cloned.notClone.clone() is a protected method
+        // CloneNotSupportedException is thrown because Object.clone() is called but the class not implements Cloneable
         cloned.notClone = (NotClone) notClone.clone();
         return cloned;
     }
