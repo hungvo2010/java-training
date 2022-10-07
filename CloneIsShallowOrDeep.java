@@ -8,5 +8,9 @@ public class CloneIsShallowOrDeep {
         b[0].x = 5;
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
+        // Shallow copy: only copy the reference of the object
+        // Deep copy: copy the object itself
+        // Clone is shallow when the member of the object is object type
+        // Clone is deep when the member of the object is primitive type
     }
 }

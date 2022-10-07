@@ -9,7 +9,7 @@ public class BreakEncapsulation {
         // Return a mutable field: Date
         final Date startDate = barca.getStartDate();
         startDate.setSeconds(100);
-        // Change object field without setter method will break encapsulation
+        // Change object field without mutator method will break encapsulation
         // So return a copy of the field instead of the field itself
         System.out.println("After: " + barca.getStartDate().getSeconds());
     }    
