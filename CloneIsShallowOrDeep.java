@@ -12,5 +12,11 @@ public class CloneIsShallowOrDeep {
         // Deep copy: copy the object itself
         // Clone is shallow when the member of the object is object type
         // Clone is deep when the member of the object is primitive type
+
+        byte[] c = new byte[]{1, 2, 3};
+        byte[] d = c.clone();
+        d[0] = 5;
+        System.out.println(Arrays.toString(c));
+        System.out.println(Arrays.toString(d));
     }
 }
