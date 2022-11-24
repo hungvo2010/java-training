@@ -8,6 +8,7 @@ public class Football implements Comparable<Football> {
     private int score;
     private int time;
     private String team = init();
+    private List<Employee> employees = new ArrayList<>();
     private final Date start;
 
     public Football(int score, int time, String team) {

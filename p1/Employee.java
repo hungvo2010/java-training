@@ -8,7 +8,7 @@ import java.util.Objects;
 import p2.Football;
 
 
-public class Employee implements Comparable<Employee>, Iterator<Employee> {
+class Employee implements Comparable<Employee>, Iterator<Employee> {
 
     private String name;
     private double salary;
