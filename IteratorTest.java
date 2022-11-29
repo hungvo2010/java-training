@@ -19,7 +19,7 @@ public class IteratorTest {
         // ListIterator it2 = list.listIterator(-1); //
         // java.lang.IndexOutOfBoundsException
         ListIterator it3 = list.listIterator(3); // call it3.next() will throw java.util.NoSuchElementException
-        System.out.println(it3.next());
+        // System.out.println(it3.nextIndex());  // available for listIterator only
         // listIterator.forEachRemaining(returnPredicate()); error, use Consumer instead
     }
 
