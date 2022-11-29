@@ -13,19 +13,26 @@ public class IteratorTest {
         Iterator it = list.iterator();
         ListIterator listIterator = list.listIterator();
         listIterator.forEachRemaining(returnConsumer());
-        // listIterator.forEachRemaining(returnPredicate()); error
+
+        // Iterator it2 = list.iterator(2); // Error
+        ListIterator it2 = list.listIterator(1); // return an Iterator that point the element at index - 1
+        // ListIterator it2 = list.listIterator(-1); //
+        // java.lang.IndexOutOfBoundsException
+        ListIterator it3 = list.listIterator(3); // call it3.next() will throw java.util.NoSuchElementException
+        System.out.println(it3.next());
+        // listIterator.forEachRemaining(returnPredicate()); error, use Consumer instead
     }
 
-    public static Consumer returnConsumer(){
+    public static Consumer returnConsumer() {
         return t -> {
             if (t.equals(2)) {
                 System.out.println("Found: 2");
             }
             System.out.println("Found: " + t);
         };
-    } 
+    }
 
-    public static Predicate returnPredicate(){
+    public static Predicate returnPredicate() {
         return t -> {
             return t.equals(2);
         };
