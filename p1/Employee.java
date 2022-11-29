@@ -6,9 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.Objects;
 
 import p2.Football;
-
-
-class Employee implements Comparable<Employee>, Iterator<Employee> {
+public class Employee implements Comparable<Employee>, Iterator<Employee> {
 
     private String name;
     private double salary;

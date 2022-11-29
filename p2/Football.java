@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import p1.Employee;
+
 public class Football implements Comparable<Football> {
     private int score;
     private int time;
