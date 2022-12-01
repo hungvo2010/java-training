@@ -49,7 +49,7 @@ public class Employee implements Comparable<Employee>, Iterator<Employee> {
 
     @Override
     public String toString() {
-        return getClass().getName() + "[name=" + name + ",salary=" + salary + "]";
+        return getClass().getSimpleName() + "{name=" + name + ",salary=" + salary + "}";
         // return super.toString();
     }
 
