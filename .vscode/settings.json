@@ -1,5 +1,12 @@
 {
     "java.project.sourcePaths": [
         "."
+    ],
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-1.8.0-openjdk-amd64",
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-1.8",
+          "path": "/usr/lib/jvm/java-1.8.0-openjdk-amd64",
+        },
     ]
 }

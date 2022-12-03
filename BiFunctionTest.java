@@ -6,5 +6,8 @@ public class BiFunctionTest {
             return first.length() - second.length();
         };
         System.out.println(compareBaseOnLength.apply("sin", "company"));
+    
+        compareBaseOnLength = BiFunc::compare;
+        System.out.println(compareBaseOnLength.apply("hello", "company length"));
     }
 }
