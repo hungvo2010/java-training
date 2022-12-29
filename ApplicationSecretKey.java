@@ -22,6 +22,7 @@ public class ApplicationSecretKey {
     }
 
     private static String chooseFilePath() {
+        System.out.println("chooseFilePath");
         String filePath;
         String appProf = System.getProperty("Dzappprof", "development");
         if ("development".equals(appProf)) {
