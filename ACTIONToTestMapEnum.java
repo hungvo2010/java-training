@@ -11,6 +11,7 @@ public enum ACTIONToTestMapEnum {
 
     private int valueAction;
     private static Map<Integer, ACTIONToTestMapEnum> map = new HashMap<Integer, ACTIONToTestMapEnum>();
+    private static StringBuilder sb = new StringBuilder();
 
     ACTIONToTestMapEnum(int t) {
         valueAction = t;
